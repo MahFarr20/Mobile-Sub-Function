@@ -1,0 +1,15 @@
+"--endian=little" 
+
+"--cpu=Cortex-M4" 
+
+"--fpu=VFPv4_SP" 
+
+"--semihosting" 
+
+"--device=TM4C123GH6PM" 
+
+"--drv_interface_speed=500" 
+
+
+
+

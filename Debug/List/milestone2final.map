@@ -1,0 +1,385 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.2.160/W32 for ARM                  13/Dec/2018  23:30:57
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\mohamed\Desktop\Milestone3\Debug\Exe\milestone2final.out
+#    Map file     =  
+#        C:\Users\mohamed\Desktop\Milestone3\Debug\List\milestone2final.map
+#    Command line =  
+#        -f C:\Users\mohamed\AppData\Local\Temp\EWE1FA.tmp
+#        (C:\Users\mohamed\Desktop\Milestone3\Debug\Obj\Calc.o
+#        C:\Users\mohamed\Desktop\Milestone3\Debug\Obj\KEYPAD.o
+#        C:\Users\mohamed\Desktop\Milestone3\Debug\Obj\LCD.o
+#        C:\Users\mohamed\Desktop\Milestone3\Debug\Obj\main.o
+#        --no_out_extension -o
+#        C:\Users\mohamed\Desktop\Milestone3\Debug\Exe\milestone2final.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\mohamed\Desktop\Milestone3\Debug\List\milestone2final.map
+#        --config F:\IAR\arm\CONFIG\generic_cortex.icf --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x7'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0M, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0x40
+  .intvec            ro code          0x0    0x40  vector_table_M.o [4]
+                                   - 0x40    0x40
+
+"P1":                                      0x259c
+  .text              ro code         0x40   0xe26  xprintffull_nomb.o [2]
+  .text              ro code        0xe66     0x2  vector_table_M.o [4]
+  .text              ro code        0xe68    0x16  strchr.o [4]
+  .text              ro code        0xe80    0x40  xfail_s.o [2]
+  .text              ro code        0xec0    0x36  strlen.o [4]
+  .text              ro code        0xef8    0x58  memchr.o [4]
+  .text              ro code        0xf50   0x230  I64DivMod.o [4]
+  .text              ro code       0x1180   0x1a2  DblMul.o [3]
+  .text              ro code       0x1324    0x76  ABImemcpy_unaligned.o [4]
+  .text              ro code       0x139c    0x70  frexp.o [3]
+  .text              ro code       0x140c    0x2e  DblCmpLe.o [3]
+  .text              ro code       0x143c    0x2e  DblCmpGe.o [3]
+  .text              ro code       0x146c   0x13a  ldexp.o [3]
+  .text              ro code       0x15a8    0x3a  DblToS32.o [3]
+  .text              ro code       0x15e4    0x22  S32ToDbl.o [3]
+  .text              ro code       0x1608    0xe2  DblSub.o [3]
+  .text              ro code       0x16ec   0x246  DblDiv.o [3]
+  .text              ro code       0x1934    0x28  DblToU32.o [3]
+  .text              ro code       0x195c    0x1a  U32ToDbl.o [3]
+  .text              ro code       0x1976     0x6  abort.o [2]
+  .text              ro code       0x197c     0x2  I64DivZer.o [4]
+  .text              ro code       0x1980   0x16a  DblAdd.o [3]
+  .text              ro code       0x1aec    0x14  exit.o [5]
+  .text              ro code       0x1b00    0x80  iarttio.o [5]
+  .text              ro code       0x1b80    0x3c  XShttio.o [2]
+  .text              ro code       0x1bbc   0x5d0  Calc.o [1]
+  .text              ro code       0x218c   0x134  KEYPAD.o [1]
+  .text              ro code       0x22c0    0xec  LCD.o [1]
+  .text              ro code       0x23ac    0x48  FltToDbl.o [3]
+  .text              ro code       0x23f4    0x28  printf.o [2]
+  .text              ro code       0x241c     0x8  abs.o [2]
+  .text              ro code       0x2424    0x38  packbits_init_single.o [4]
+  .text              ro code       0x245c    0x28  data_init.o [4]
+  .text              ro code       0x2484    0x22  fpinit_M.o [3]
+  .text              ro code       0x24a6    0x22  iarwrite.o [5]
+  .iar.init_table    const         0x24c8    0x10  - Linker created -
+  .text              ro code       0x24d8    0x20  putchar.o [2]
+  .text              ro code       0x24f8    0x10  write.o [5]
+  .text              ro code       0x2508    0x1e  dwrite.o [5]
+  .text              ro code       0x2526    0x20  iarwstd.o [5]
+  .text              ro code       0x2548    0x1e  cmain.o [4]
+  .text              ro code       0x2566     0x4  low_level_init.o [2]
+  .text              ro code       0x256a    0x1c  main.o [1]
+  .text              ro code       0x2586     0x4  exit.o [2]
+  .text              ro code       0x258c     0xa  cexit.o [4]
+  .text              ro code       0x2596    0x16  xprout.o [2]
+  .rodata            const         0x25ac    0x10  KEYPAD.o [1]
+  .text              ro code       0x25bc     0xc  cstartup_M.o [4]
+  .rodata            const         0x25c8     0x8  Calc.o [1]
+  .rodata            const         0x25d0     0x0  packbits_init_single.o [4]
+  Initializer bytes  const         0x25d0     0xc  <for P2-1>
+                                 - 0x25dc  0x259c
+
+"P2", part 1 of 2:                           0x4b
+  P2-1                        0x2000'0000    0x4b  <Init block>
+    .data            inited   0x2000'0000     0x4  Calc.o [1]
+    .data            inited   0x2000'0004     0x4  Calc.o [1]
+    .data            inited   0x2000'0008     0x8  XShttio.o [2]
+    .bss             inited   0x2000'0010     0x4  Calc.o [1]
+    .bss             inited   0x2000'0014     0x4  Calc.o [1]
+    .bss             inited   0x2000'0018     0x4  Calc.o [1]
+    .bss             inited   0x2000'001c     0x8  Calc.o [1]
+    .bss             inited   0x2000'0024     0x4  Calc.o [1]
+    .bss             inited   0x2000'0028     0x4  Calc.o [1]
+    .bss             inited   0x2000'002c     0x4  Calc.o [1]
+    .bss             inited   0x2000'0030     0x4  Calc.o [1]
+    .bss             inited   0x2000'0034     0x4  Calc.o [1]
+    .bss             inited   0x2000'0038     0x4  Calc.o [1]
+    .bss             inited   0x2000'003c     0x4  Calc.o [1]
+    .bss             inited   0x2000'0040     0x4  Calc.o [1]
+    .bss             inited   0x2000'0044     0x4  xfail_s.o [2]
+    .bss             inited   0x2000'0048     0x1  Calc.o [1]
+    .bss             inited   0x2000'0049     0x1  Calc.o [1]
+    .bss             inited   0x2000'004a     0x1  XShttio.o [2]
+                            - 0x2000'004b    0x4b
+
+"P2", part 2 of 2:                          0x400
+  CSTACK                      0x2000'0050   0x400  <Block>
+    CSTACK           uninit   0x2000'0050   0x400  <Block tail>
+                            - 0x2000'0450   0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+       0x25dc     0x7'ffff  0x7'da24
+  0x2000'004b  0x2000'004f       0x5
+  0x2000'0450  0x2000'ffff    0xfbb0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0xc (16% of destination):
+               0x25d0   0xc
+    1 destination range, total size 0x4b:
+          0x2000'0000  0x4b
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+C:\Users\mohamed\Desktop\Milestone3\Debug\Obj: [1]
+    Calc.o                    1 488       17       62
+    KEYPAD.o                    308       16
+    LCD.o                       236
+    main.o                       28
+    -------------------------------------------------
+    Total:                    2 060       33       62
+
+dl7M_tln.a: [2]
+    XShttio.o                    60        2        9
+    abort.o                       6
+    abs.o                         8
+    exit.o                        4
+    low_level_init.o              4
+    printf.o                     40
+    putchar.o                    32
+    xfail_s.o                    64        1        4
+    xprintffull_nomb.o        3 622
+    xprout.o                     22
+    -------------------------------------------------
+    Total:                    3 862        3       13
+
+m7M_tls.a: [3]
+    DblAdd.o                    362
+    DblCmpGe.o                   46
+    DblCmpLe.o                   46
+    DblDiv.o                    582
+    DblMul.o                    418
+    DblSub.o                    226
+    DblToS32.o                   58
+    DblToU32.o                   40
+    FltToDbl.o                   72
+    S32ToDbl.o                   34
+    U32ToDbl.o                   26
+    fpinit_M.o                   34
+    frexp.o                     112
+    ldexp.o                     314
+    -------------------------------------------------
+    Total:                    2 370
+
+rt7M_tl.a: [4]
+    ABImemcpy_unaligned.o       118
+    I64DivMod.o                 560
+    I64DivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    memchr.o                     88
+    packbits_init_single.o       56
+    strchr.o                     22
+    strlen.o                     54
+    vector_table_M.o             66
+    -------------------------------------------------
+    Total:                    1 058
+
+shb_l.a: [5]
+    dwrite.o                     30
+    exit.o                       20
+    iarttio.o                   128
+    iarwrite.o                   34
+    iarwstd.o                    32
+    write.o                      16
+    -------------------------------------------------
+    Total:                      260
+
+    Gaps                         30
+    Linker created                        16    1 024
+-----------------------------------------------------
+    Grand Total:              9 640       52    1 099
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base        0x24c8          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x24d8          --   Gb  - Linker created -
+?main                        0x2549         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x2000'0050          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0450          --   Gb  - Linker created -
+LCD_command                  0x2337   0x36  Code  Gb  LCD.o [1]
+LCD_init                     0x22c1   0x76  Code  Gb  LCD.o [1]
+LoadInt                       0x1ef   0x7a  Code  Lc  xprintffull_nomb.o [2]
+Region$$Table$$Base          0x24c8          --   Gb  - Linker created -
+Region$$Table$$Limit         0x24d8          --   Gb  - Linker created -
+_GenldFullNoMb                0xb65  0x274  Code  Lc  xprintffull_nomb.o [2]
+_LdtobFullNoMb                0x739  0x400  Code  Lc  xprintffull_nomb.o [2]
+_LitobFullNoMb                0x5e1  0x112  Code  Lc  xprintffull_nomb.o [2]
+_PrintfFullNoMb                0x41  0x19e  Code  Gb  xprintffull_nomb.o [2]
+_Prout                       0x2597   0x16  Code  Gb  xprout.o [2]
+_PutcharsFullNoMb             0xdd9   0x2e  Code  Lc  xprintffull_nomb.o [2]
+_PutfldFullNoMb               0x269  0x26c  Code  Lc  xprintffull_nomb.o [2]
+_PuttxtFullNoMb               0x4d5  0x10c  Code  Lc  xprintffull_nomb.o [2]
+__aeabi_cdcmple              0x140d         Code  Gb  DblCmpLe.o [3]
+__aeabi_cdrcmple             0x143d         Code  Gb  DblCmpGe.o [3]
+__aeabi_d2iz                 0x15a9         Code  Gb  DblToS32.o [3]
+__aeabi_d2uiz                0x1935         Code  Gb  DblToU32.o [3]
+__aeabi_ddiv                 0x16ed         Code  Gb  DblDiv.o [3]
+__aeabi_dmul                 0x1181         Code  Gb  DblMul.o [3]
+__aeabi_dsub                 0x1609         Code  Gb  DblSub.o [3]
+__aeabi_f2d                  0x23ad         Code  Gb  FltToDbl.o [3]
+__aeabi_i2d                  0x15e5         Code  Gb  S32ToDbl.o [3]
+__aeabi_ldiv0                0x197d         Code  Gb  I64DivZer.o [4]
+__aeabi_ui2d                 0x195d         Code  Gb  U32ToDbl.o [3]
+__aeabi_uldivmod              0xf51         Code  Gb  I64DivMod.o [4]
+__cmain                      0x2549         Code  Gb  cmain.o [4]
+__dwrite                     0x2509   0x1e  Code  Gb  dwrite.o [5]
+__exit                       0x1aed   0x14  Code  Gb  exit.o [5]
+__iar_Fail_s                  0xe81   0x1c  Code  Gb  xfail_s.o [2]
+__iar_Memchr                  0xef9         Code  Gb  memchr.o [4]
+__iar_Strchr                  0xe69         Code  Gb  strchr.o [4]
+__iar_close_ttio             0x1b01   0x2e  Code  Gb  iarttio.o [5]
+__iar_dadd                   0x1619         Code  Gb  DblSub.o [3]
+__iar_data_init3             0x245d   0x28  Code  Gb  data_init.o [4]
+__iar_dsub                   0x1981         Code  Gb  DblAdd.o [3]
+__iar_dsubStart              0x1993         Code  Gb  DblAdd.o [3]
+__iar_frexp                  0x13a9         Code  Gb  frexp.o [3]
+__iar_frexpl                 0x13a9         Code  Gb  frexp.o [3]
+__iar_get_ttio               0x1b31   0x4c  Code  Gb  iarttio.o [5]
+__iar_init_vfp               0x2485         Code  Gb  fpinit_M.o [3]
+__iar_ldexp64                0x146d         Code  Gb  ldexp.o [3]
+__iar_lookup_ttioh           0x1baf    0x4  Code  Gb  XShttio.o [2]
+__iar_packbits_init_single3
+                             0x2425   0x38  Code  Gb  packbits_init_single.o [4]
+__iar_program_start          0x25bd         Code  Gb  cstartup_M.o [4]
+__iar_scalbln64              0x146d         Code  Gb  ldexp.o [3]
+__iar_scalbn64               0x146d         Code  Gb  ldexp.o [3]
+__iar_sh_stdout              0x2527   0x20  Code  Gb  iarwstd.o [5]
+__iar_sh_write               0x24a7   0x22  Code  Gb  iarwrite.o [5]
+__iar_softfp___iar_frexp64
+                             0x139d         Code  Gb  frexp.o [3]
+__iar_softfp_frexp           0x139d         Code  Gb  frexp.o [3]
+__iar_softfp_frexpl          0x139d         Code  Gb  frexp.o [3]
+__iar_ttio_guard_lock        0x1b81   0x1e  Code  Gb  XShttio.o [2]
+__iar_ttio_guard_unlock
+                             0x1b9f   0x10  Code  Gb  XShttio.o [2]
+__iar_ttio_handles      0x2000'0008    0x8  Data  Lc  XShttio.o [2]
+__iar_unaligned_memcpy       0x1325         Code  Gb  ABImemcpy_unaligned.o [4]
+__iar_unaligned_memcpy4
+                             0x1345         Code  Gb  ABImemcpy_unaligned.o [4]
+__iar_unaligned_memcpy8
+                             0x1345         Code  Gb  ABImemcpy_unaligned.o [4]
+__low_level_init             0x2567    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [4]
+__write                      0x24f9   0x10  Code  Gb  write.o [5]
+_call_main                   0x2555         Code  Gb  cmain.o [4]
+_exit                        0x258d         Code  Gb  cexit.o [4]
+_main                        0x2563         Code  Gb  cmain.o [4]
+abort                        0x1977    0x6  Code  Gb  abort.o [2]
+abs                          0x241d    0x8  Code  Gb  abs.o [2]
+cal                          0x1bbd  0x31c  Code  Gb  Calc.o [1]
+calculate                    0x1fc1   0x74  Code  Gb  Calc.o [1]
+calculate_divide             0x2035   0xf8  Code  Gb  Calc.o [1]
+delayMs                      0x1f91   0x1a  Code  Gb  Calc.o [1]
+delayUs                      0x1fab   0x16  Code  Gb  Calc.o [1]
+exit                         0x2587    0x4  Code  Gb  exit.o [2]
+flag                    0x2000'0000    0x4  Data  Gb  Calc.o [1]
+flag2                   0x2000'0004    0x4  Data  Gb  Calc.o [1]
+j                       0x2000'0018    0x4  Data  Gb  Calc.o [1]
+key                     0x2000'0010    0x4  Data  Gb  Calc.o [1]
+keypad_getkey                0x21dd   0xba  Code  Gb  KEYPAD.o [1]
+keypad_init                  0x218d   0x50  Code  Gb  KEYPAD.o [1]
+lcd_data                     0x236d   0x24  Code  Gb  LCD.o [1]
+ldexp                        0x146d         Code  Gb  ldexp.o [3]
+ldexpl                       0x146d         Code  Gb  ldexp.o [3]
+main                         0x256b   0x1c  Code  Gb  main.o [1]
+memchr                        0xef9         Code  Gb  memchr.o [4]
+operation                    0x1ed9   0xb8  Code  Gb  Calc.o [1]
+printf                       0x23f5   0x28  Code  Gb  printf.o [2]
+putchar                      0x24d9   0x20  Code  Gb  putchar.o [2]
+result                  0x2000'0014    0x4  Data  Gb  Calc.o [1]
+result2                 0x2000'0049    0x1  Data  Gb  Calc.o [1]
+result3                 0x2000'002c    0x4  Data  Gb  Calc.o [1]
+result4                 0x2000'0034    0x4  Data  Gb  Calc.o [1]
+result5                 0x2000'0038    0x4  Data  Gb  Calc.o [1]
+result6                 0x2000'003c    0x4  Data  Gb  Calc.o [1]
+result7                 0x2000'0040    0x4  Data  Gb  Calc.o [1]
+scalbln                      0x146d         Code  Gb  ldexp.o [3]
+scalblnl                     0x146d         Code  Gb  ldexp.o [3]
+scalbn                       0x146d         Code  Gb  ldexp.o [3]
+scalbnl                      0x146d         Code  Gb  ldexp.o [3]
+scale                         0x6f3   0x46  Code  Lc  xprintffull_nomb.o [2]
+sec_hand                0x2000'0044    0x4  Data  Lc  xfail_s.o [2]
+strchr                        0xe69         Code  Gb  strchr.o [4]
+strlen                        0xec1         Code  Gb  strlen.o [4]
+tens                    0x2000'0028    0x4  Data  Gb  Calc.o [1]
+tens_2                  0x2000'0030    0x4  Data  Gb  Calc.o [1]
+ttio_guard              0x2000'004a    0x1  Data  Lc  XShttio.o [2]
+x                       0x2000'001c    0x8  Data  Gb  Calc.o [1]
+y                       0x2000'0048    0x1  Data  Gb  Calc.o [1]
+z                       0x2000'0024    0x4  Data  Gb  Calc.o [1]
+
+
+[1] = C:\Users\mohamed\Desktop\Milestone3\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  9 640 bytes of readonly  code memory
+     52 bytes of readonly  data memory
+  1 099 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

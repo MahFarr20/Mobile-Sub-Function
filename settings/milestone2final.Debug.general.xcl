@@ -1,0 +1,15 @@
+"F:\IAR\arm\bin\armproc.dll" 
+
+"F:\IAR\arm\bin\armlmiftdi.dll" 
+
+"F:\college\Senior1 (7th semester)\Microcontrollers\Project\Milestone3\Debug\Exe\milestone2final.out" 
+
+--plugin="F:\IAR\arm\bin\armbat.dll" 
+
+--device_macro="F:\IAR\arm\config\debugger\TexasInstruments\TM4C123.dmac" 
+
+--flash_loader="F:\IAR\arm\config\flashloader\TexasInstruments\FlashTC4_H6_o.board" 
+
+
+
+
